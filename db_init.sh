@@ -40,6 +40,9 @@ ifconfig $NIC down
 macchanger -r $NIC
 ifconfig $NIC up
 
+#reconnect to network with new mac -- might be a better way this takes some time
+nmcli con up id "$ESSID"
+
 # checking on status of postgresql service
 printf "checking database...\n"
 CHECK=$(service postgresql status | grep dead)
