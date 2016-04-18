@@ -51,7 +51,9 @@ if [[ "$CHECK" == "   Active: inactive (dead)" ]]; then
     service postgresql start
 fi
 
-# database initialization
+
+
+# database initialization 
 msfdb init
 msfdb start
 
